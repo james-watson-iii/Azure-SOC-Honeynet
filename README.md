@@ -29,12 +29,19 @@ The architecture of the mini honeynet in Azure consisted of the following compon
 
 For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls intentionally set wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint.
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+Allowed Network Security Group Malicious Flows
+<img width="1152" alt="before-nsg-malicious-allowed-in" src="https://github.com/user-attachments/assets/bf069938-ca4d-4c8c-94d5-1dea87613e88">
+<br>
+<br>
+Failed Linux SSH Login Attempts<img width="1205" alt="before-linux-ssh-auth-fail" src="https://github.com/user-attachments/assets/800aa7e9-120d-4a87-8e0f-67173cc259ad">
+<br>
+<br>
+Failed Windows RDP Authorization Attempts
+<br><img width="1082" alt="before-windows-rdp-auth-fail" src="https://github.com/user-attachments/assets/32405649-a8c8-4be0-8b90-dfe9c2eecb86">
+
 
 ## Metrics Before Hardening / Security Controls
 
